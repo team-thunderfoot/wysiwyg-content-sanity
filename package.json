@@ -1,5 +1,5 @@
 {
-  "name": "@teamthunderfoot/wysiwyg-content",
+  "name": "@teamthunderfoot/wysiwyg-content-sanity",
   "version": "0.0.64",
   "source": [
     "src/*.html"

@@ -1,34 +1,5 @@
 .c--content-a {
-    @include block-btn(
-        $btn-class: g--btn-01,
-        // $btn-margin-bottom: $measure*4
-    );
-    @include block-btn-modifier(
-        $btn-class-modifier: g--btn-01--second
-    );
 
-    @include block-columns(
-        // $columns-margin-bottom: $measure*4
-    );
-
-    @include block-footnote(
-        $text-font: g,
-        $text-font-weight: 300,
-        // $footnote-margin-bottom: $measure * 2,
-    );
-    @include block-footnote-modifier(
-        $text-color: map-get($color-options, a)
-    );
-
-    @include block-highlighted(
-        $text-font: c,
-        // $highlighted-margin-bottom: $measure * 4,
-        // $highlighted-padding-top: 0,
-        // $text-font-weight: false,
-    );
-    @include block-highlighted-modifier(
-        $text-color: map-get($color-options, a)
-    );
 
     @include block-image(
         $caption-font: g,
@@ -61,36 +32,6 @@
         $border-width: 1px,
     );
 
-    @include block-separator(
-        // $separator-margin: $measure * 6 0
-    );
-    @include block-separator-modifier(
-        $separator-width: 1px,
-        $separator-color: map-get($color-options, e),
-    );
-
-    @include block-table(
-        $header-font: f,
-        $body-rows-font: f,
-        $caption-font: g,
-        $header-font-weight: 600,
-        // $other-rows-font-weight: false,
-        // $caption-font-weight: false,
-    );
-    @include block-table-modifier(
-        $header-border-width: 1px, //* header border
-        $header-border-color: map-get($color-options, a), //* header border
-        $body-rows-border-width: 1px, //* body rows border
-        $body-rows-border-color: transparent, //* body rows border
-        $header-background: map-get($color-options, a), //* header background
-        $even-rows-background: map-get($color-options, d), //* even rows background
-        $odd-rows-background: map-get($color-options, b), //* odd rows background (except the first one)
-        $header-text-color: map-get($color-options, d), //* header text color
-        $body-rows-text-color: map-get($color-options, a), //* body rows text color
-        $caption-color: map-get($color-options, a) //* caption text color
-    );
-
-    @include block-video();
 
     @include headings(
         $h2-font: b,
@@ -173,9 +114,6 @@
         $text-color: map-get($color-options, a)
     );
     
-    @include utilities(
-        // $media-text-aligned-margin-x: $measure*5
-    );
 
     & > h2:first-child,
     & > h3:first-child,

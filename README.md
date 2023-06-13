@@ -1,119 +1,17 @@
-# wysiwyg-content
+# wysiwyg-content-sanity
 
 ## Stylized blocks
 
-- [block-btn](#block-btn)
-- [block-columns](#block-columns)
-- [block-footnote](#block-footnote)
-- [block-highlighted](#block-highlighted-highlighted-paragraph) (highlighted paragraph)
 - [block-image](#block-image)
 - [block-quote](#block-quote)
-- [block-separator](#block-separator)
-- [block-table](#block-table)
-- [block-video](#block-video)
 - [headings](#headings)
 - [links](#links)
 - [lists](#lists)
 - [paragraphs](#paragraphs)
-- [utilities](#utilities)
 
 ## Blocks
 
 All blocks except utilities have 2 mixins, one for styles and the other one for colors and modifiers.
-
-### block-btn
-
-Styles the default wordpress block.
-With the block-btn mixin, you can choose an existing class for the btn.
-With the block-btn-modifier mixin, you can add a modifier class to the btn, you can add this mixin or not.
-> Note: All classes you add here must exist and be included in the entry before the c--content stylesheet
-
-#### Editable variables
-
-- $btn-class
-- $btn-class-modifier
-
-#### Editable variables for Modifiers
-
-- $btn-class-modifier
-
-```scss
-    @include block-btn(
-        $btn-class: g--btn-01,
-        // $btn-margin-bottom: $measure*4
-    );
-    // @include block-btn-modifier(
-    //     $btn-class-modifier: g--btn-01--second
-    // );
-```
-
-### block-columns
-
-Styles the default wordpress block.
-With the block-columns mixin, you set the margin-bottom for columns, make all components inside them the same height and make the columns breakpoint tablets.
-
-```scss
-    @include block-columns(
-        // $columns-margin-bottom: $measure*4
-    );
-```
-
-
-### block-footnote
-
-This is a custom block.
-
-#### Editable variables
-
-- $footnote-margin-bottom: $measure*2 by default
-- $text-font
-- $text-font-weight: false by default
-- $text-color
-
-#### Editable variables for Modifiers
-
-- $text-color
-
-```scss
-    @include block-footnote(
-        $text-font: e,
-        // $footnote-margin-bottom: $measure * 2,
-        // $text-font-weight: default,
-    );
-    @include block-footnote-modifier(
-        $text-color: map-get($color-options, a)
-    );
-```
-
-
-### block-highlighted (highlighted paragraph)
-This is a custom block.
-
-#### Editable variables
-
-- $highlighted-margin-bottom: $measure*4 by default
-- $highlighted-padding-top: 0 by default
-- $text-font
-- $text-font-weight: false by default
-- $text-color
-
-#### Editable variables for Modifiers
-
-- $text-color
-
-```scss
-    @include block-highlighted(
-        $text-font: c,
-        // $highlighted-margin-bottom: $measure * 4,
-        // $highlighted-padding-top: 0,
-        // $text-font-weight: default,
-    );
-    @include block-highlighted-modifier(
-        $text-color: map-get($color-options, a)
-    );
-```
-
-
 ### block-image
 
 Styles the default wordpress block.
@@ -194,106 +92,6 @@ Styles the default wordpress block.
         $border-color: map-get($color-options, e),
         $border-width: 1px,
     );
-```
-
-
-### block-separator
-
-Styles the default wordpress block.
-
-#### Editable variables
-
-- $separator-margin: $measure*6 0 by default
-- $separator-width
-- $separator-color
-
-#### Editable variables for Modifiers
-
-- $separator-width
-- $separator-color
-
-```scss
-    @include block-separator(
-        // $separator-margin: $measure * 6 0
-    );
-    @include block-separator-modifier(
-        $separator-width: 1px,
-        $separator-color: map-get($color-options, e),
-    );
-```
-
-
-### block-table
-
-Styles the default wordpress block.
-
-![alt text][table]
-
-[table]: https://raw.githubusercontent.com/team-thunderfoot/wysiwyg-content/main/src/img/table.png
-
-#### Editable variables
-
-- $first-row-font
-- $other-rows-font
-- $caption-font
-- $first-row-font-weight: false by default
-- $other-rows-font-weight: false by default
-- $caption-font-weight: false by default
-- $first-row-border-width
-- $first-row-border-color
-- $other-rows-border-width
-- $other-rows-border-color
-- $first-row-background
-- $even-rows-background
-- $odd-rows-background
-- $first-row-text-color
-- $other-rows-text-color
-- $caption-color
-
-#### Editable variables for Modifiers
-
-- $header-border-width
-- $header-border-color
-- $body-rows-border-width
-- $body-rows-border-color
-- $header-background
-- $even-rows-background
-- $odd-rows-background
-- $header-text-color
-- $body-rows-text-color
-- $caption-color
-
-```scss
-    @include block-table(
-        $header-font: d,
-        $body-rows-font: d,
-        $caption-font: f,
-        // $header-font-weight: default,
-        // $body-rows-font-weight: default,
-        // $caption-font-weight: default,
-    );
-    @include block-table-modifier(
-        $header-border-width: 1px,
-        $header-border-color: map-get($color-options, a),
-        $body-rows-border-width: 1px,
-        $body-rows-border-color: transparent,
-        $header-background: map-get($color-options, a),
-        $even-rows-background: map-get($color-options, d),
-        $odd-rows-background: map-get($color-options, b),
-        $header-text-color: map-get($color-options, d),
-        $body-rows-text-color: map-get($color-options, a),
-        $caption-color: map-get($color-options, a)
-    );
-```
-
-
-### block-video
-
-Styles the default wordpress block.
-With the block-video mixin, you set the aspect-ratio for the video iframes.
-
-```scss
-    @include block-video();
 ```
 
 
@@ -404,11 +202,11 @@ Unordered list artworks can be circles, squares or images, it depends on the var
 
 ![alt text][ul-lists]
 
-[ul-lists]: https://raw.githubusercontent.com/team-thunderfoot/wysiwyg-content/main/src/img/ul-lists.png
+[ul-lists]: https://raw.githubusercontent.com/team-thunderfoot/wysiwyg-content-sanity/main/src/img/ul-lists.png
 
 ![alt text][ol-lists]
 
-[ol-lists]: https://raw.githubusercontent.com/team-thunderfoot/wysiwyg-content/main/src/img/ol-lists.png
+[ol-lists]: https://raw.githubusercontent.com/team-thunderfoot/wysiwyg-content-sanity/main/src/img/ol-lists.png
 
 #### Editable variables
 
@@ -546,77 +344,22 @@ Styles the default wordpress block.
     @include paragraphs-modifier(
         $text-color: map-get($color-options, a)
     );
-```
-
-
-### utilities
-
-Here are the classes Wordpress uses to align blocks left/right/center
-
-#### Editable variables
-
-- $media-text-aligned-margin-x: $measure*5 by default
-
-```scss
-    @include utilities(
-        // $media-text-aligned-margin-x: $measure*5
-    );
-```
 
 ## Use
 
 Install package
 ```sh
-npm i @teamthunderfoot/wysiwyg-content
+npm i @teamthunderfoot/wysiwyg-content-sanity
 ```
 
 Import content mixins at the beginning of the c--content stylesheet
 ```scss
-@import "@teamthunderfoot/wysiwyg-content/src/scss/_mixins.scss";
-```
-
-Your HTML structure should look like this
-
-```php
-<div class="c--content-a">
-  <?= apply_filters('the_content',get_the_content()) ?>
-</div>
+@import "@teamthunderfoot/wysiwyg-content-sanity/src/scss/_mixins.scss";
 ```
 
 Copy c--content styles and change parameters with the ones we want
 ```scss
     .c--content-a {
-        @include block-btn(
-            $btn-class: g--btn-01,
-            // $btn-margin-bottom: $measure*4
-        );
-        // @include block-btn-modifier(
-        //     $btn-class-modifier: g--btn-01--second
-        // );
-
-        @include block-columns(
-            // $columns-margin-bottom: $measure*4
-        );
-
-        @include block-footnote(
-            $text-font: e,
-            // $footnote-margin-bottom: $measure * 2,
-            // $text-font-weight: default,
-        );
-        @include block-footnote-modifier(
-            $text-color: map-get($color-options, a)
-        );
-
-        @include block-highlighted(
-            $text-font: c,
-            // $highlighted-margin-bottom: $measure * 4,
-            // $highlighted-padding-top: 0,
-            // $text-font-weight: default,
-        );
-        @include block-highlighted-modifier(
-            $text-color: map-get($color-options, a)
-        );
-
         @include block-image(
             $caption-font: g,
             // $image-block-margin-bottom: $measure*5,
@@ -647,37 +390,6 @@ Copy c--content styles and change parameters with the ones we want
             $border-color: map-get($color-options, e),
             $border-width: 1px,
         );
-
-        @include block-separator(
-            // $separator-margin: $measure * 6 0
-        );
-        @include block-separator-modifier(
-            $separator-width: 1px,
-            $separator-color: map-get($color-options, e),
-        );
-
-        @include block-table(
-            $header-font: d,
-            $body-rows-font: d,
-            $caption-font: f,
-            // $header-font-weight: default,
-            // $body-rows-font-weight: default,
-            // $caption-font-weight: default,
-        );
-        @include block-table-modifier(
-            $header-border-width: 1px,
-            $header-border-color: map-get($color-options, a),
-            $body-rows-border-width: 1px,
-            $body-rows-border-color: transparent,
-            $header-background: map-get($color-options, a),
-            $even-rows-background: map-get($color-options, d),
-            $odd-rows-background: map-get($color-options, b),
-            $header-text-color: map-get($color-options, d),
-            $body-rows-text-color: map-get($color-options, a),
-            $caption-color: map-get($color-options, a)
-        );
-
-        @include block-video();
 
         @include headings(
             $h2-font: b,
@@ -760,10 +472,6 @@ Copy c--content styles and change parameters with the ones we want
             $text-color: map-get($color-options, a)
         );
 
-        @include utilities(
-            // $media-text-aligned-margin-x: $measure*5
-        );
-        
         & > h2:first-child,
         & > h3:first-child,
         & > h4:first-child,
