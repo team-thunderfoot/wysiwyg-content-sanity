@@ -14,7 +14,7 @@
 All blocks except utilities have 2 mixins, one for styles and the other one for colors and modifiers.
 ### block-image
 
-Styles the default wordpress block.
+Styles the default sanity block.
 
 #### Editable variables
 
@@ -47,7 +47,7 @@ Styles the default wordpress block.
 
 ### block-quote
 
-Styles the default wordpress block.
+Styles the default sanity block.
 
 #### Editable variables
 
@@ -97,7 +97,7 @@ Styles the default wordpress block.
 
 ### headings
 
-Styles the default wordpress blocks.
+Styles the default sanity blocks.
 
 #### Editable variables
 
@@ -170,7 +170,7 @@ Styles the default wordpress blocks.
 
 ### links
 
-Styles the default wordpress block.
+Styles the default sanity block.
 With the links mixin, you can choose an existing class for the link.
 With the links-modifier mixin, you can add a modifier class to the link, you can add this mixin or not.
 > Note: All classes you add here must exist and be included in the entry before the c--content stylesheet
@@ -196,7 +196,7 @@ With the links-modifier mixin, you can add a modifier class to the link, you can
 
 ### lists
 
-Styles the default wordpress blocks.
+Styles the default sanity blocks.
 Unordered list artworks can be circles, squares or images, it depends on the variables we add ($X-artwork-X). If they're circles or squares they can be filled or just bordered.
 > Note: Variables named $second-level-artwork-X or $third-level-artwork-X should only be added in case we want a different value for them than for the other levels.
 
@@ -318,7 +318,7 @@ Unordered list artworks can be circles, squares or images, it depends on the var
 
 ### paragraphs
 
-Styles the default wordpress block.
+Styles the default sanity block.
 
 #### Editable variables
 
