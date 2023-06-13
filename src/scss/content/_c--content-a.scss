@@ -62,20 +62,20 @@
 
     @include lists(
         $text-font: f,
-        $first-number-width: 16px,
+        $first-number-width: 24px,
         $first-level-artwork-width: $measure,
-        $first-level-artwork-top: 13px,
+        $first-level-artwork-top: 9px,
         // $lists-margin-bottom: $measure * 4,
         // $lists-items-margin-bottom: $measure * 2,
         // $second-level-artwork-width: false,
         // $second-level-artwork-top: false,
         $third-level-artwork-width: 6px,
-        // $third-level-artwork-top: false,
+        $third-level-artwork-top: 10px,
         // $text-font-weight: false,
     );
     @include lists-modifier(
         $text-color: map-get($color-options, a),
-        $number-color: map-get($color-options, f),
+        $number-color: map-get($color-options, g),
         // $first-level-artwork-image: 'https://picsum.photos/20',
         // $first-level-artwork-border-radius: false,
         $first-level-artwork-background: map-get($color-options, f),
