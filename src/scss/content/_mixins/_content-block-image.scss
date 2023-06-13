@@ -17,14 +17,6 @@
                 border-radius: $img-border-radius;
             }
         }
-        figcaption {
-            @extend .f--font-#{$caption-font} !optional;
-            @if $caption-font-weight {
-                font-weight: $caption-font-weight;
-            }
-            text-align: right;
-            margin-top: $caption-margin-top;
-        }
         &.alignleft {
             float: left;
             margin-right: $image-text-aligned-margin-x;
@@ -47,22 +39,6 @@
                 margin: 0;
                 display: block;
             }
-            figcaption {
-                @extend .f--font-#{$caption-font} !optional;
-                @if $caption-font-weight {
-                    font-weight: $caption-font-weight;
-                }
-                text-align: right;
-                margin-top: $caption-margin-top;
-            }
-        }
-    }
-}
-
-@mixin block-image-modifier($caption-color) {
-    figure {
-        figcaption {
-            color: $caption-color;
         }
     }
 }

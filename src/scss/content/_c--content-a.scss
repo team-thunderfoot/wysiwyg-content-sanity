@@ -3,15 +3,13 @@
 
     @include block-image(
         $caption-font: g,
-        // $image-block-margin-bottom: $measure*5,
+        $image-block-margin-bottom: $measure*5,
         // $image-text-aligned-margin-x: $measure*5,
         // $caption-margin-top: $measure*2,
         // $caption-font-weight: false,
         // $img-border-radius: false
     );
-    @include block-image-modifier(
-        $caption-color: map-get($color-options, a)
-    );
+
 
     @include block-quote(
         $quote-font: c,
@@ -34,8 +32,8 @@
 
 
     @include headings(
-        $h2-font: b,
-        $h3-font: c,
+        $h2-font: a,
+        $h3-font: b,
         $h4-font: c,
         $h5-font: d,
         $h6-font: d,
@@ -51,14 +49,14 @@
         // $h6-margin-bottom: $measure,
         // $h2-font-weight: false,
         $h3-font-weight: 500,
-        // $h4-font-weight: false,
-        $h5-font-weight: 500,
+        $h4-font-weight: 500,
+        $h5-font-weight: 900,
         // $h6-font-weight: false,
     );
     @include headings-modifier(
         $h2-color: map-get($color-options, a),
-        $h3-color: map-get($color-options, e),
-        $h4-color: map-get($color-options, f),
+        $h3-color: map-get($color-options, a),
+        $h4-color: map-get($color-options, e),
         $h5-color: map-get($color-options, a),
         $h6-color: map-get($color-options, a),
     );
