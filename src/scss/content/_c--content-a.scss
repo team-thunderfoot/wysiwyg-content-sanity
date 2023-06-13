@@ -2,11 +2,8 @@
 
 
     @include block-image(
-        $caption-font: g,
         $image-block-margin-bottom: $measure*5,
         // $image-text-aligned-margin-x: $measure*5,
-        // $caption-margin-top: $measure*2,
-        // $caption-font-weight: false,
         // $img-border-radius: false
     );
 
@@ -14,18 +11,13 @@
     @include block-quote(
         $quote-font: c,
         $quote-font-style: italic,
-        $cite-font: e,
-        $cite-font-style: normal,
         // $quote-padding: $measure * 3 0,
         // $quote-margin-top: $measure*5,
         // $quote-margin-bottom: $measure*6,
-        // $cite-margin-top: $measure*3,
         // $quote-font-weight: false,
-        $cite-font-weight: 300,
     );
     @include block-quote-modifier(
         $quote-color: map-get($color-options, a), //* quote color
-        $cite-color: map-get($color-options, a), //* cite color
         $border-color: map-get($color-options, e),
         $border-width: 1px,
     );

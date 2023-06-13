@@ -1,9 +1,6 @@
 @mixin block-image(
-    $caption-font,
     $image-block-margin-bottom: $measure * 5,
     $image-text-aligned-margin-x: $measure * 5,
-    $caption-margin-top: $measure * 2,
-    $caption-font-weight: false,
     $img-border-radius: false
 ) {
     figure {
