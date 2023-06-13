@@ -18,29 +18,16 @@ Styles the default sanity block.
 
 #### Editable variables
 
-- $caption-font
-- $caption-font-weight: false by default
-- $caption-margin-top: $measure*2 by default
 - $image-block-margin-bottom: $measure*5 by default
 - $image-text-aligned-margin-x: $measure*5 by default
 - $img-border-radius: false by default
-- $caption-color
 
-#### Editable variables for Modifiers
-
-- $caption-color
 
 ```scss
     @include block-image(
-        $caption-font: g,
         // $image-block-margin-bottom: $measure*5,
         // $image-text-aligned-margin-x: $measure*5,
-        // $caption-margin-top: $measure*2,
-        // $caption-font-weight: default,
         // $img-border-radius: default
-    );
-    @include block-image-modifier(
-        $caption-color: map-get($color-options, a)
     );
 ```
 
@@ -53,23 +40,17 @@ Styles the default sanity block.
 
 - $quote-font
 - $quote-font-style
-- $cite-font
-- $cite-font-style
 - $quote-font-weight: false by default
-- $cite-font-weight: false by default
 - $quote-color
 - $quote-padding: $measure*3 0 by default
 - $quote-margin-top: $measure*5 by default
 - $quote-margin-bottom: $measure*6 by default
-- $cite-margin-top: $measure*3 by default
-- $cite-color
 - $border-color
 - $border-width
 
 #### Editable variables for Modifiers
 
 - $quote-color
-- $cite-color
 - $border-color
 - $border-width
 
@@ -77,18 +58,13 @@ Styles the default sanity block.
     @include block-quote(
         $quote-font: d,
         $quote-font-style: italic,
-        $cite-font: e,
-        $cite-font-style: normal,
         // $quote-padding: $measure * 3 0,
         // $quote-margin-top: $measure*5,
         // $quote-margin-bottom: $measure*6,
-        // $cite-margin-top: $measure*3,
         // $quote-font-weight: default,
-        // $cite-font-weight: default,
     );
     @include block-quote-modifier(
         $quote-color: map-get($color-options, a),
-        $cite-color: map-get($color-options, a),
         $border-color: map-get($color-options, e),
         $border-width: 1px,
     );
@@ -361,32 +337,21 @@ Copy c--content styles and change parameters with the ones we want
 ```scss
     .c--content-a {
         @include block-image(
-            $caption-font: g,
             // $image-block-margin-bottom: $measure*5,
             // $image-text-aligned-margin-x: $measure*5,
-            // $caption-margin-top: $measure*2,
-            // $caption-font-weight: default,
             // $img-border-radius: default
-        );
-        @include block-image-modifier(
-            $caption-color: map-get($color-options, a)
         );
 
         @include block-quote(
             $quote-font: d,
             $quote-font-style: italic,
-            $cite-font: e,
-            $cite-font-style: normal,
             // $quote-padding: $measure * 3 0,
             // $quote-margin-top: $measure*5,
             // $quote-margin-bottom: $measure*6,
-            // $cite-margin-top: $measure*3,
             // $quote-font-weight: default,
-            // $cite-font-weight: default,
         );
         @include block-quote-modifier(
             $quote-color: map-get($color-options, a),
-            $cite-color: map-get($color-options, a),
             $border-color: map-get($color-options, e),
             $border-width: 1px,
         );
