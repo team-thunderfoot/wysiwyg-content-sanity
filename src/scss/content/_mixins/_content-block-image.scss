@@ -1,0 +1,70 @@
+@mixin block-image(
+    $caption-font,
+    $image-block-margin-bottom: $measure*5,
+    $image-text-aligned-margin-x: $measure*5,
+    $caption-margin-top: $measure*2,
+    $caption-font-weight: false,
+    $img-border-radius: false,
+) {
+    figure.wp-block-image{
+        display: block;
+        width: fit-content;
+        margin: 0 auto $image-block-margin-bottom;
+        img{
+            margin: 0;
+            display: block;
+            @if $img-border-radius {
+                border-radius: $img-border-radius
+            }
+        }
+        figcaption{
+            @extend .f--font-#{$caption-font} !optional;
+            @if $caption-font-weight {
+                font-weight: $caption-font-weight;
+            }
+            text-align: right;
+            margin-top: $caption-margin-top;
+        }
+        &.alignleft{
+            float: left;
+            margin-right: $image-text-aligned-margin-x;
+        }
+        &.alignright{
+            float: right;
+            margin-left: $image-text-aligned-margin-x;
+        }
+        &.aligncenter{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    div.wp-block-image{
+        margin: 0;
+        figure{
+            margin-top: 0;
+            margin-bottom: $image-block-margin-bottom;
+            img{
+                margin: 0;
+                display: block;
+            }
+            figcaption{
+                @extend .f--font-#{$caption-font} !optional;
+                @if $caption-font-weight {
+                    font-weight: $caption-font-weight;
+                }
+                text-align: right;
+                margin-top: $caption-margin-top;
+            }
+        }
+    }
+}
+
+@mixin block-image-modifier(
+    $caption-color
+) {
+    figure{
+        figcaption{
+            color: $caption-color;
+        }
+    }
+}

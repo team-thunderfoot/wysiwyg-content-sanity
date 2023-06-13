@@ -1,0 +1,15 @@
+@mixin links(
+    $link-class
+){
+    a:not([class]) {
+        @extend .#{$link-class} !optional;
+    }
+}
+
+@mixin links-modifier(
+    $link-class-modifier
+) {
+    a:not([class]) {
+        @extend .#{$link-class-modifier} !optional;
+    }
+}
