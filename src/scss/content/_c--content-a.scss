@@ -56,17 +56,17 @@
     @include headings-modifier(
         $h2-color: map-get($color-options, a),
         $h3-color: map-get($color-options, a),
-        $h4-color: map-get($color-options, e),
-        $h5-color: map-get($color-options, a),
-        $h6-color: map-get($color-options, a),
+        $h4-color: map-get($color-options, a),
+        $h5-color: map-get($color-options, e),
+        $h6-color: map-get($color-options, f),
     );
 
     @include links(
         $link-class: g--link-01
     );
-    // @include links-modifier(
-    //     $link-class-modifier: g--link-01--second
-    // );
+    @include links-modifier(
+        $link-class-modifier: g--link-01--second
+    );
 
     @include lists(
         $text-font: f,
@@ -104,9 +104,9 @@
     @include paragraphs(
         $text-font: f,
         $bold-font-weight: 600,
-        // $paragraphs-margin-bottom: $measure * 4,
+        $paragraphs-margin-bottom: $measure * 3,
         // $paragraphs-before-lists-margin-bottom: $measure * 3,
-        // $text-font-weight: false,
+        // $text-font-weight: 400,
     );
     @include paragraphs-modifier(
         $text-color: map-get($color-options, a)
