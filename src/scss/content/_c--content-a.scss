@@ -2,11 +2,17 @@
 
 
     @include block-image(
+        $caption-font: g,
+        $caption-margin-top: $measure*2,
+        $caption-font-weight: 600,    
         $image-block-margin-bottom: $measure*5,
         // $img-border-radius: false,
         // $size-small: 25%,
         // $size-medium: 50%,    
     );
+
+    @include block-image-modifier($caption-color: map-get($color-options, f));
+
 
 
     @include block-quote(

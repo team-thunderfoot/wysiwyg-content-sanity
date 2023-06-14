@@ -1,13 +1,22 @@
 @mixin block-image(
+    $caption-font,
+    $caption-margin-top: $measure * 2,
+    $caption-font-weight: false,
     $image-block-margin-bottom: $measure * 5,
     $img-border-radius: false,
     $size-small: 25%,
-    $size-medium: 50%,
+    $size-medium: 50%
 ) {
     figure {
         display: block;
         width: 100%;
         margin: 0 auto $image-block-margin-bottom;
+        &.c--content-media--small {
+            width: $size-small;
+        }
+        &.c--content-media--medium {
+            width: $size-medium;
+        }
         img {
             width: 100%;
             margin: 0 auto;
@@ -15,12 +24,24 @@
             @if $img-border-radius {
                 border-radius: $img-border-radius;
             }
-            &.c--content-media--small {
-                width: $size-small;
+        }
+        figcaption {
+            margin: 0 auto;
+
+            @extend .f--font-#{$caption-font} !optional;
+            @if $caption-font-weight {
+                font-weight: $caption-font-weight;
             }
-            &.c--content-media--medium {
-                width: $size-medium;
-            }
+            text-align: right;
+            margin-top: $caption-margin-top;
+        }
+    }
+}
+
+@mixin block-image-modifier($caption-color) {
+    figure {
+        figcaption {
+            color: $caption-color;
         }
     }
 }
