@@ -1,7 +1,9 @@
 @mixin block-image(
     $image-block-margin-bottom: $measure * 5,
     $image-text-aligned-margin-x: $measure * 5,
-    $img-border-radius: false
+    $img-border-radius: false,
+    $size-small: 25%,
+    $size-medium: 50%,
 ) {
     figure {
         display: block;
@@ -13,28 +15,11 @@
             @if $img-border-radius {
                 border-radius: $img-border-radius;
             }
-        }
-        &.alignleft {
-            float: left;
-            margin-right: $image-text-aligned-margin-x;
-        }
-        &.alignright {
-            float: right;
-            margin-left: $image-text-aligned-margin-x;
-        }
-        &.aligncenter {
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-    div {
-        margin: 0;
-        figure {
-            margin-top: 0;
-            margin-bottom: $image-block-margin-bottom;
-            img {
-                margin: 0;
-                display: block;
+            &.c--content-media--small {
+                width: $size-small;
+            }
+            &.c--content-media--medium {
+                width: $size-medium;
             }
         }
     }

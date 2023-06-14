@@ -27,7 +27,10 @@ Styles the default sanity block.
     @include block-image(
         // $image-block-margin-bottom: $measure*5,
         // $image-text-aligned-margin-x: $measure*5,
-        // $img-border-radius: default
+        // $img-border-radius: default,
+        // $size-small: 25%,
+        // $size-medium: 50%,
+
     );
 ```
 

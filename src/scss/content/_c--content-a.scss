@@ -4,7 +4,9 @@
     @include block-image(
         $image-block-margin-bottom: $measure*5,
         // $image-text-aligned-margin-x: $measure*5,
-        // $img-border-radius: false
+        // $img-border-radius: false,
+        // $size-small: 25%,
+        // $size-medium: 50%,    
     );
 
 
