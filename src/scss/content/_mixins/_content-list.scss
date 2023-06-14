@@ -104,6 +104,7 @@
         }
         //* Nested ol
         > ol {
+            counter-reset: item2;
             margin-top: $lists-items-margin-bottom;
             padding-left: calc(
                 #{$measure * 2} + #{$first-number-width * 2}
@@ -112,35 +113,59 @@
                 padding-left: calc(
                     #{$measure * 2} + #{$first-number-width * 2}
                 ); //* space between number and text + number width
+                &::before {
+                    content: counters(item, ".") "." counters(item2, ".") ".";
+                    counter-increment: item2;
+                }
             }
 
             //* Third level nested ol
             > ol {
+                counter-reset: item3;
                 > li {
                     padding-left: calc(
                         #{$measure * 2} + #{$first-number-width * 3}
                     ); //* space between number and text + number width
+                    &::before {
+                        content: counters(item, ".") "." counters(item2, ".") "." counters(item3, ".") ".";
+                        counter-increment: item3;
+                    }
                 }
                 //* Fourth level nested ol
                 > ol {
+                    counter-reset: item4;
                     > li {
                         padding-left: calc(
                             #{$measure * 2} + #{$first-number-width * 4}
                         ); //* space between number and text + number width
+                        &::before {
+                            content: counters(item, ".") "." counters(item2, ".") "." counters(item3, ".") "." counters(item4, ".") ".";
+                            counter-increment: item4;
+                        }
                     }
                     //* Fifth level nested ol
                     > ol {
+                        counter-reset: item5;
                         > li {
                             padding-left: calc(
                                 #{$measure * 2} + #{$first-number-width * 5}
                             ); //* space between number and text + number width
+                            &::before {
+                                content: counters(item, ".") "." counters(item2, ".") "." counters(item3, ".") "." counters(item4, ".") "." counters(item5, ".") ".";
+                                counter-increment: item5;
+                            }
                         }
                         //* Sixth level nested ol
                         > ol {
+                            counter-reset: item6;
                             > li {
                                 padding-left: calc(
                                     #{$measure * 2} + #{$first-number-width * 6}
                                 ); //* space between number and text + number width
+                                &::before {
+                                    content: counters(item, ".") "." counters(item2, ".") "." counters(item3, ".") "." counters(item4, ".") "." counters(item5, ".") "." counters(item6, ".") ".";
+                                    counter-increment: item6;
+                                }
                             }
                         }
                     }
