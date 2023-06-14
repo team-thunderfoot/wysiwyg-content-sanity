@@ -18,15 +18,15 @@ Styles the default sanity block.
 
 #### Editable variables
 
-- $image-block-margin-bottom: $measure*5 by default
-- $image-text-aligned-margin-x: $measure*5 by default
-- $img-border-radius: false by default
+- $image-block-margin-bottom: $measure*5
+- $img-border-radius: default
+- $size-small: 25%
+- $size-medium: 50%
 
 
 ```scss
     @include block-image(
         // $image-block-margin-bottom: $measure*5,
-        // $image-text-aligned-margin-x: $measure*5,
         // $img-border-radius: default,
         // $size-small: 25%,
         // $size-medium: 50%,
@@ -44,12 +44,9 @@ Styles the default sanity block.
 - $quote-font
 - $quote-font-style
 - $quote-font-weight: false by default
-- $quote-color
 - $quote-padding: $measure*3 0 by default
 - $quote-margin-top: $measure*5 by default
 - $quote-margin-bottom: $measure*6 by default
-- $border-color
-- $border-width
 
 #### Editable variables for Modifiers
 
