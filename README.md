@@ -178,11 +178,11 @@ Unordered list artworks can be circles, squares or images, it depends on the var
 
 ![alt text][ul-lists]
 
-[ul-lists]: https://raw.githubusercontent.com/team-thunderfoot/wysiwyg-content-sanity/src/img/ul-lists.png
+[ul-lists]: https://raw.githubusercontent.com/team-thunderfoot/wysiwyg-content-sanity/main/src/img/ul-lists.png
 
 ![alt text][ol-lists]
 
-[ol-lists]: https://raw.githubusercontent.com/team-thunderfoot/wysiwyg-content-sanity/src/img/ol-lists.png
+[ol-lists]: https://raw.githubusercontent.com/team-thunderfoot/wysiwyg-content-sanity/main/src/img/ol-lists.png
 
 #### Editable variables
 
