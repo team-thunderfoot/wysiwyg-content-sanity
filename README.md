@@ -25,17 +25,17 @@ Styles the default sanity block.
 -   $size-medium: 50%
 
 ```scss
-@include block-image(
-    $caption-font: g,
-    $caption-margin-top: $measure * 2,
-    $caption-font-weight: 600,
-    $image-block-margin-bottom: $measure * 5,
-    // $img-border-radius: false,
-    // $size-small: 25%,
-    // $size-medium: 50%,
-);
+    @include block-image(
+        $caption-font: g,
+        $caption-margin-top: $measure*2,
+        $caption-font-weight: 600,    
+        $image-block-margin-bottom: $measure*5,
+        // $img-border-radius: false,
+        // $size-small: 25%,
+        // $size-medium: 50%,    
+    );
 
-@include block-image-modifier($caption-color: map-get($color-options, f));
+    @include block-image-modifier($caption-color: map-get($color-options, f));
 ```
 
 ### block-quote
@@ -58,19 +58,20 @@ Styles the default sanity block.
 -   $border-width
 
 ```scss
-@include block-quote(
-    $quote-font: c,
-    $quote-font-style: italic,
-    // $quote-padding: $measure * 3 0,
-    // $quote-margin-top: $measure*5,
-    // $quote-margin-bottom: $measure*6,
-    // $quote-font-weight: false,
-);
-@include block-quote-modifier(
-    $quote-color: map-get($color-options, a),
-    //* quote color $border-color: map-get($color-options, e),
-    $border-width: 1px
-);
+    @include block-quote(
+        $quote-font: c,
+        $quote-font-style: italic,
+        // $quote-padding: $measure * 3 0,
+        // $quote-margin-top: $measure*5,
+        // $quote-margin-bottom: $measure*6,
+        // $quote-font-weight: false,
+    );
+    @include block-quote-modifier(
+        $quote-color: map-get($color-options, a), //* quote color
+        $border-color: map-get($color-options, e),
+        $border-width: 1px,
+    );
+
 ```
 
 ### headings
@@ -114,35 +115,36 @@ Styles the default sanity blocks.
 -   $h6-color
 
 ```scss
-@include headings(
-    $h2-font: b,
-    $h3-font: c,
-    $h4-font: c,
-    $h5-font: d,
-    $h6-font: d,
-    // $h2-padding-top: $measure*5,
-    // $h2-margin-bottom: $measure*3,
-    // $h3-padding-top: $measure*5,
-    // $h3-margin-bottom: $measure*3,
-    // $h4-padding-top: $measure*5,
-    // $h4-margin-bottom: $measure*2,
-    // $h5-padding-top: $measure*5,
-    // $h5-margin-bottom: $measure*2,
-    // $h6-padding-top: $measure*5,
-    // $h6-margin-bottom: $measure,
-    // $h2-font-weight: default,
-    // $h3-font-weight: default,
-    // $h4-font-weight: default,
-    // $h5-font-weight: default,
-    // $h6-font-weight: default,
-);
-@include headings-modifier(
-    $h2-color: map-get($color-options, a),
-    $h3-color: map-get($color-options, e),
-    $h4-color: map-get($color-options, f),
-    $h5-color: map-get($color-options, a),
-    $h6-color: map-get($color-options, a)
-);
+    @include headings(
+        $h2-font: a,
+        $h3-font: b,
+        $h4-font: c,
+        $h5-font: d,
+        $h6-font: d,
+        // $h2-padding-top: $measure*5,
+        // $h2-margin-bottom: $measure*3,
+        // $h3-padding-top: $measure*5,
+        // $h3-margin-bottom: $measure*3,
+        // $h4-padding-top: $measure*5,
+        // $h4-margin-bottom: $measure*2,
+        // $h5-padding-top: $measure*5,
+        // $h5-margin-bottom: $measure*2,
+        // $h6-padding-top: $measure*5,
+        // $h6-margin-bottom: $measure,
+        // $h2-font-weight: false,
+        $h3-font-weight: 500,
+        $h4-font-weight: 500,
+        $h5-font-weight: 900,
+        // $h6-font-weight: false,
+    );
+    @include headings-modifier(
+        $h2-color: map-get($color-options, a),
+        $h3-color: map-get($color-options, a),
+        $h4-color: map-get($color-options, a),
+        $h5-color: map-get($color-options, e),
+        $h6-color: map-get($color-options, f),
+    );
+
 ```
 
 ### links
@@ -163,10 +165,12 @@ With the links-modifier mixin, you can add a modifier class to the link, you can
 -   $link-class-modifier
 
 ```scss
-@include links($link-class: g--link-01);
-// @include links-modifier(
-//     $link-class-modifier: g--link-01--second
-// );
+    @include links(
+        $link-class: g--link-01
+    );
+    @include links-modifier(
+        $link-class-modifier: g--link-01--second
+    );
 ```
 
 ### lists
@@ -236,38 +240,38 @@ Unordered list artworks can be circles, squares or images, it depends on the var
 -   $third-level-artwork-border-color
 
 ```scss
-@include lists(
-    $text-font: d,
-    $first-number-width: 22px,
-    $first-level-artwork-width: $measure,
-    $first-level-artwork-top: 13px,
-    // $lists-margin-bottom: $measure * 4,
-    // $lists-items-margin-bottom: $measure * 2,
-    // $second-level-artwork-width: default,
-    // $second-level-artwork-top: default,
-    // $third-level-artwork-width: default,
-    // $third-level-artwork-top:default,
-    // $text-font-weight: default,
-);
-@include lists-modifier(
-    $text-color: map-get($color-options, a),
-    $number-color: map-get($color-options, f),
-    // $first-level-artwork-image: default,
-    // $first-level-artwork-border-radius: false,
-    // $first-level-artwork-background: default,
-    // $first-level-artwork-border-width: default,
-    // $first-level-artwork-border-color: default,
-    // $second-level-artwork-image: default,
-    // $second-level-artwork-border-radius: false,
-    // $second-level-artwork-background: default,
-    // $second-level-artwork-border-width: default,
-    // $second-level-artwork-border-color: default,
-    // $third-level-artwork-image: default,
-    // $third-level-artwork-border-radius: false,
-    // $third-level-artwork-background: default,
-    // $third-level-artwork-border-width: default,
-    // $third-level-artwork-border-color: default,
-);
+    @include lists(
+        $text-font: f,
+        $first-number-width: 24px,
+        $first-level-artwork-width: $measure,
+        $first-level-artwork-top: 9px,
+        // $lists-margin-bottom: $measure * 4,
+        // $lists-items-margin-bottom: $measure * 2,
+        // $second-level-artwork-width: false,
+        // $second-level-artwork-top: false,
+        $third-level-artwork-width: 6px,
+        $third-level-artwork-top: 10px,
+        // $text-font-weight: false,
+    );
+    @include lists-modifier(
+        $text-color: map-get($color-options, a),
+        $number-color: map-get($color-options, g),
+        // $first-level-artwork-image: 'https://picsum.photos/20',
+        // $first-level-artwork-border-radius: false,
+        $first-level-artwork-background: map-get($color-options, f),
+        // $first-level-artwork-border-width: false,
+        // $first-level-artwork-border-color: false,
+        // $second-level-artwork-image: false,
+        // $first-level-artwork-border-radius: false,
+        // $second-level-artwork-background: false,
+        $second-level-artwork-border-width: 2px,
+        $second-level-artwork-border-color: map-get($color-options, f),
+        // $third-level-artwork-image: false,
+        // $first-level-artwork-border-radius: false,
+        // $third-level-artwork-background: false,
+        $third-level-artwork-border-width: 1px,
+        $third-level-artwork-border-color: map-get($color-options, g),
+    );
 ```
 
 > #### Variables needed for circles:
@@ -310,11 +314,11 @@ Styles the default sanity block.
 
 ````scss
     @include paragraphs(
-        $text-font: d,
+        $text-font: f,
         $bold-font-weight: 600,
-        // $paragraphs-margin-bottom: $measure * 4,
+        $paragraphs-margin-bottom: $measure * 3,
         // $paragraphs-before-lists-margin-bottom: $measure * 3,
-        // $text-font-weight: default,
+        // $text-font-weight: 400,
     );
     @include paragraphs-modifier(
         $text-color: map-get($color-options, a)
@@ -337,29 +341,39 @@ Copy c--content styles and change parameters with the ones we want
 
 ```scss
 .c--content-a {
+    
     @include block-image(
-        // $image-block-margin-bottom: $measure*5,
-        // $image-text-aligned-margin-x: $measure*5,
-        // $img-border-radius: default
+        $caption-font: g,
+        $caption-margin-top: $measure*2,
+        $caption-font-weight: 600,    
+        $image-block-margin-bottom: $measure*5,
+        // $img-border-radius: false,
+        // $size-small: 25%,
+        // $size-medium: 50%,    
     );
 
+    @include block-image-modifier($caption-color: map-get($color-options, f));
+
+
+
     @include block-quote(
-        $quote-font: d,
+        $quote-font: c,
         $quote-font-style: italic,
         // $quote-padding: $measure * 3 0,
         // $quote-margin-top: $measure*5,
         // $quote-margin-bottom: $measure*6,
-        // $quote-font-weight: default,
+        // $quote-font-weight: false,
     );
     @include block-quote-modifier(
-        $quote-color: map-get($color-options, a),
+        $quote-color: map-get($color-options, a), //* quote color
         $border-color: map-get($color-options, e),
-        $border-width: 1px
+        $border-width: 1px,
     );
 
+
     @include headings(
-        $h2-font: b,
-        $h3-font: c,
+        $h2-font: a,
+        $h3-font: b,
         $h4-font: c,
         $h5-font: d,
         $h6-font: d,
@@ -373,76 +387,80 @@ Copy c--content styles and change parameters with the ones we want
         // $h5-margin-bottom: $measure*2,
         // $h6-padding-top: $measure*5,
         // $h6-margin-bottom: $measure,
-        // $h2-font-weight: default,
-        // $h3-font-weight: default,
-        // $h4-font-weight: default,
-        // $h5-font-weight: default,
-        // $h6-font-weight: default,
+        // $h2-font-weight: false,
+        $h3-font-weight: 500,
+        $h4-font-weight: 500,
+        $h5-font-weight: 900,
+        // $h6-font-weight: false,
     );
     @include headings-modifier(
         $h2-color: map-get($color-options, a),
-        $h3-color: map-get($color-options, e),
-        $h4-color: map-get($color-options, f),
-        $h5-color: map-get($color-options, a),
-        $h6-color: map-get($color-options, a)
+        $h3-color: map-get($color-options, a),
+        $h4-color: map-get($color-options, a),
+        $h5-color: map-get($color-options, e),
+        $h6-color: map-get($color-options, f),
     );
 
-    @include links($link-class: g--link-01);
-    // @include links-modifier(
-    //     $link-class-modifier: g--link-01--second
-    // );
+    @include links(
+        $link-class: g--link-01
+    );
+    @include links-modifier(
+        $link-class-modifier: g--link-01--second
+    );
 
     @include lists(
-        $text-font: d,
-        $first-number-width: 22px,
+        $text-font: f,
+        $first-number-width: 24px,
         $first-level-artwork-width: $measure,
-        $first-level-artwork-top: 13px,
+        $first-level-artwork-top: 9px,
         // $lists-margin-bottom: $measure * 4,
         // $lists-items-margin-bottom: $measure * 2,
-        // $second-level-artwork-width: default,
-        // $second-level-artwork-top: default,
-        // $third-level-artwork-width: default,
-        // $third-level-artwork-top:default,
-        // $text-font-weight: default,
+        // $second-level-artwork-width: false,
+        // $second-level-artwork-top: false,
+        $third-level-artwork-width: 6px,
+        $third-level-artwork-top: 10px,
+        // $text-font-weight: false,
     );
     @include lists-modifier(
         $text-color: map-get($color-options, a),
-        $number-color: map-get($color-options, f),
-        // $first-level-artwork-image: default,
+        $number-color: map-get($color-options, g),
+        // $first-level-artwork-image: 'https://picsum.photos/20',
         // $first-level-artwork-border-radius: false,
-        // $first-level-artwork-background: default,
-        // $first-level-artwork-border-width: default,
-        // $first-level-artwork-border-color: default,
-        // $second-level-artwork-image: default,
-        // $second-level-artwork-border-radius: false,
-        // $second-level-artwork-background: default,
-        // $second-level-artwork-border-width: default,
-        // $second-level-artwork-border-color: default,
-        // $third-level-artwork-image: default,
-        // $third-level-artwork-border-radius: false,
-        // $third-level-artwork-background: default,
-        // $third-level-artwork-border-width: default,
-        // $third-level-artwork-border-color: default,
+        $first-level-artwork-background: map-get($color-options, f),
+        // $first-level-artwork-border-width: false,
+        // $first-level-artwork-border-color: false,
+        // $second-level-artwork-image: false,
+        // $first-level-artwork-border-radius: false,
+        // $second-level-artwork-background: false,
+        $second-level-artwork-border-width: 2px,
+        $second-level-artwork-border-color: map-get($color-options, f),
+        // $third-level-artwork-image: false,
+        // $first-level-artwork-border-radius: false,
+        // $third-level-artwork-background: false,
+        $third-level-artwork-border-width: 1px,
+        $third-level-artwork-border-color: map-get($color-options, g),
     );
 
     @include paragraphs(
-        $text-font: d,
+        $text-font: f,
         $bold-font-weight: 600,
-        // $paragraphs-margin-bottom: $measure * 4,
+        $paragraphs-margin-bottom: $measure * 3,
         // $paragraphs-before-lists-margin-bottom: $measure * 3,
-        // $text-font-weight: default,
+        // $text-font-weight: 400,
     );
-    @include paragraphs-modifier($text-color: map-get($color-options, a));
+    @include paragraphs-modifier(
+        $text-color: map-get($color-options, a)
+    );
+    
 
     & > h2:first-child,
     & > h3:first-child,
     & > h4:first-child,
     & > h5:first-child,
     & > h6:first-child,
-    & > p:first-child {
+    & > p:first-child  {   
         padding-top: 0;
     }
-
     *:last-child {
         margin-bottom: 0;
     }
