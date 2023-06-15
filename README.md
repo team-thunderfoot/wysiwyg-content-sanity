@@ -27,15 +27,15 @@ Styles the default sanity block.
 ```scss
 @include block-image(
     $caption-font: g,
-    // $caption-margin-top: $measure*2,
-    // $caption-font-weight: default,
-    // $image-block-margin-bottom: $measure*5,
-    // $img-border-radius: default,
+    $caption-margin-top: $measure * 2,
+    $caption-font-weight: 600,
+    $image-block-margin-bottom: $measure * 5,
+    // $img-border-radius: false,
     // $size-small: 25%,
     // $size-medium: 50%,
 );
 
-@include block-image-modifier($caption-color: map-get($color-options, a));
+@include block-image-modifier($caption-color: map-get($color-options, f));
 ```
 
 ### block-quote
@@ -59,16 +59,16 @@ Styles the default sanity block.
 
 ```scss
 @include block-quote(
-    $quote-font: d,
+    $quote-font: c,
     $quote-font-style: italic,
     // $quote-padding: $measure * 3 0,
     // $quote-margin-top: $measure*5,
     // $quote-margin-bottom: $measure*6,
-    // $quote-font-weight: default,
+    // $quote-font-weight: false,
 );
 @include block-quote-modifier(
     $quote-color: map-get($color-options, a),
-    $border-color: map-get($color-options, e),
+    //* quote color $border-color: map-get($color-options, e),
     $border-width: 1px
 );
 ```
