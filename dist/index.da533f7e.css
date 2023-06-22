@@ -1754,6 +1754,7 @@ select:-webkit-autofill:focus {
 
 .c--content-a figure img {
   width: 100%;
+  height: auto;
   margin: 0 auto;
   display: block;
 }
