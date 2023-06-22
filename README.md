@@ -312,7 +312,7 @@ Styles the default sanity block.
 
 -   $text-color
 
-````scss
+```scss
     @include paragraphs(
         $text-font: f,
         $bold-font-weight: 600,
@@ -323,13 +323,14 @@ Styles the default sanity block.
     @include paragraphs-modifier(
         $text-color: map-get($color-options, a)
     );
+```
 
 ## Use
 
 Install package
 ```sh
 npm i @teamthunderfoot/wysiwyg-content-sanity
-````
+```
 
 Import content mixins at the beginning of the c--content stylesheet
 
