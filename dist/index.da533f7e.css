@@ -1738,10 +1738,18 @@ select:-webkit-autofill:focus {
   color: #78f2c5;
 }
 
+.c--content-a {
+  white-space: pre-line;
+}
+
 .c--content-a figure {
   width: 100%;
   margin: 0 auto 2.5rem;
   display: block;
+}
+
+.c--content-a figure:has(figcaption) {
+  margin: 0 auto 2.5rem;
 }
 
 .c--content-a figure.c--content-media--small {
@@ -1761,9 +1769,28 @@ select:-webkit-autofill:focus {
 
 .c--content-a figure figcaption {
   text-align: right;
-  color: #f66;
   margin: 1rem auto 0;
   font-weight: 600;
+}
+
+.c--content-a figure.aligncenter img {
+  width: auto;
+}
+
+.c--content-a figure.alignleft img {
+  width: auto;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.c--content-a figure.alignright img {
+  width: auto;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.c--content-a figure figcaption {
+  color: #f66;
 }
 
 .c--content-a blockquote {

@@ -21,6 +21,7 @@ Styles the default sanity block.
 
 -   $image-block-margin-bottom: $measure\*5
 -   $img-border-radius: default
+-   $image-with-caption-block-margin-bottom: $measure\*5
 -   $size-small: 25%
 -   $size-medium: 50%
 
@@ -31,6 +32,7 @@ Styles the default sanity block.
         $caption-font-weight: 600,    
         $image-block-margin-bottom: $measure*5,
         // $img-border-radius: false,
+        // $image-with-caption-block-margin-bottom: $measure*5
         // $size-small: 25%,
         // $size-medium: 50%,    
     );
@@ -349,6 +351,7 @@ Copy c--content styles and change parameters with the ones we want
         $caption-font-weight: 600,    
         $image-block-margin-bottom: $measure*5,
         // $img-border-radius: false,
+        // $image-with-caption-block-margin-bottom: $measure*5
         // $size-small: 25%,
         // $size-medium: 50%,    
     );
@@ -462,6 +465,7 @@ Copy c--content styles and change parameters with the ones we want
     & > p:first-child  {   
         padding-top: 0;
     }
+    white-space: pre-line;
     *:last-child {
         margin-bottom: 0;
     }

@@ -4,6 +4,7 @@
     $caption-font-weight: false,
     $image-block-margin-bottom: $measure * 5,
     $img-border-radius: false,
+    $image-with-caption-block-margin-bottom: $measure * 5,
     $size-small: 25%,
     $size-medium: 50%
 ) {
@@ -11,6 +12,9 @@
         display: block;
         width: 100%;
         margin: 0 auto $image-block-margin-bottom;
+        &:has(figcaption) {
+            margin: 0 auto $image-with-caption-block-margin-bottom;
+        }
         &.c--content-media--small {
             width: $size-small;
         }
@@ -35,6 +39,25 @@
             }
             text-align: right;
             margin-top: $caption-margin-top;
+        }
+        &.aligncenter {
+            img {
+                width: auto;
+            }
+        }
+        &.alignleft {
+            img {
+                width: auto;
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+        &.alignright {
+            img {
+                width: auto;
+                margin-left: auto;
+                margin-right: 0;
+            }
         }
     }
 }
