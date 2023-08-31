@@ -37,8 +37,7 @@
                 top: $first-level-artwork-top;
                 left: 0;
             }
-        }
-        //* Nested ul
+            //* Nested ul
         > ul {
             margin-top: $lists-items-margin-bottom;
             @if $second-level-artwork-width or
@@ -61,31 +60,33 @@
                             top: $second-level-artwork-top;
                         }
                     }
-                }
 
-                //* Third level nested ul
-                @if $third-level-artwork-width or $third-level-artwork-top {
-                    > ul {
-                        > li {
-                            @if $third-level-artwork-width {
-                                padding-left: calc(
-                                    #{$measure * 2} + #{$third-level-artwork-width}
-                                ); //* space between artwork and text + artwork width
-                                &::before {
-                                    width: $third-level-artwork-width;
-                                    height: $third-level-artwork-width;
+                    //* Third level nested ul
+                    @if $third-level-artwork-width or $third-level-artwork-top {
+                        > ul {
+                            > li {
+                                @if $third-level-artwork-width {
+                                    padding-left: calc(
+                                        #{$measure * 2} + #{$third-level-artwork-width}
+                                    ); //* space between artwork and text + artwork width
+                                    &::before {
+                                        width: $third-level-artwork-width;
+                                        height: $third-level-artwork-width;
+                                    }
                                 }
-                            }
-                            @if $third-level-artwork-top {
-                                &::before {
-                                    top: $third-level-artwork-top;
+                                @if $third-level-artwork-top {
+                                    &::before {
+                                        top: $third-level-artwork-top;
+                                    }
                                 }
                             }
                         }
                     }
-                }
+                }     
             }
         }
+        }
+        
     }
     ol {
         counter-reset: item;
@@ -220,8 +221,8 @@
                     border-radius: $first-level-artwork-border-radius;
                 }
             }
-        }
-        //* Nested ul
+
+            //* Nested ul
         > ul {
             padding-left: $measure * 2;
             > li {
@@ -245,8 +246,8 @@
                         border-radius: $second-level-artwork-border-radius;
                     }
                 }
-            }
-            //* Third level nested ul
+
+                //* Third level nested ul
             > ul {
                 > li {
                     &:before {
@@ -271,7 +272,11 @@
                     }
                 }
             }
+            }
+            
         }
+        }
+        
     }
     ol {
         > li {
