@@ -102,8 +102,8 @@
                 top: 0;
                 left: 0;
             }
-        }
-        //* Nested ol
+
+            //* Nested ol
         > ol {
             counter-reset: item2;
             margin-top: $lists-items-margin-bottom;
@@ -118,61 +118,69 @@
                     content: counters(item, ".") "." counters(item2, ".") ".";
                     counter-increment: item2;
                 }
-            }
 
-            //* Third level nested ol
-            > ol {
-                counter-reset: item3;
-                > li {
-                    padding-left: calc(
-                        #{$measure * 2} + #{$first-number-width * 3}
-                    ); //* space between number and text + number width
-                    &::before {
-                        content: counters(item, ".") "." counters(item2, ".") "." counters(item3, ".") ".";
-                        counter-increment: item3;
-                    }
-                }
-                //* Fourth level nested ol
+                //* Third level nested ol
                 > ol {
-                    counter-reset: item4;
+                    counter-reset: item3;
                     > li {
                         padding-left: calc(
-                            #{$measure * 2} + #{$first-number-width * 4}
+                            #{$measure * 2} + #{$first-number-width * 3}
                         ); //* space between number and text + number width
                         &::before {
-                            content: counters(item, ".") "." counters(item2, ".") "." counters(item3, ".") "." counters(item4, ".") ".";
-                            counter-increment: item4;
+                            content: counters(item, ".") "." counters(item2, ".") "." counters(item3, ".") ".";
+                            counter-increment: item3;
                         }
-                    }
-                    //* Fifth level nested ol
-                    > ol {
-                        counter-reset: item5;
-                        > li {
-                            padding-left: calc(
-                                #{$measure * 2} + #{$first-number-width * 5}
-                            ); //* space between number and text + number width
-                            &::before {
-                                content: counters(item, ".") "." counters(item2, ".") "." counters(item3, ".") "." counters(item4, ".") "." counters(item5, ".") ".";
-                                counter-increment: item5;
-                            }
-                        }
-                        //* Sixth level nested ol
+
+                        //* Fourth level nested ol
                         > ol {
-                            counter-reset: item6;
+                            counter-reset: item4;
                             > li {
                                 padding-left: calc(
-                                    #{$measure * 2} + #{$first-number-width * 6}
+                                    #{$measure * 2} + #{$first-number-width * 4}
                                 ); //* space between number and text + number width
                                 &::before {
-                                    content: counters(item, ".") "." counters(item2, ".") "." counters(item3, ".") "." counters(item4, ".") "." counters(item5, ".") "." counters(item6, ".") ".";
-                                    counter-increment: item6;
+                                    content: counters(item, ".") "." counters(item2, ".") "." counters(item3, ".") "." counters(item4, ".") ".";
+                                    counter-increment: item4;
                                 }
+
+                                //* Fifth level nested ol
+                                > ol {
+                                    counter-reset: item5;
+                                    > li {
+                                        padding-left: calc(
+                                            #{$measure * 2} + #{$first-number-width * 5}
+                                        ); //* space between number and text + number width
+                                        &::before {
+                                            content: counters(item, ".") "." counters(item2, ".") "." counters(item3, ".") "." counters(item4, ".") "." counters(item5, ".") ".";
+                                            counter-increment: item5;
+                                        }
+                                        //* Sixth level nested ol
+                                        > ol {
+                                            counter-reset: item6;
+                                            > li {
+                                                padding-left: calc(
+                                                    #{$measure * 2} + #{$first-number-width * 6}
+                                                ); //* space between number and text + number width
+                                                &::before {
+                                                    content: counters(item, ".") "." counters(item2, ".") "." counters(item3, ".") "." counters(item4, ".") "." counters(item5, ".") "." counters(item6, ".") ".";
+                                                    counter-increment: item6;
+                                                }
+                                            }
+                                        }
+
+                                        }
+                                    
+                                    }
+                                }  
                             }
                         }
+                        
                     }
                 }
             }
+
         }
+        
     }
 }
 
@@ -223,58 +231,58 @@
             }
 
             //* Nested ul
-        > ul {
-            padding-left: $measure * 2;
-            > li {
-                &:before {
-                    @if $second-level-artwork-image {
-                        background: url(#{$second-level-artwork-image});
-                        background-repeat: no-repeat;
-                        background-size: contain;
-                        background-position: center;
-                    } @else {
-                        @if $second-level-artwork-background {
-                            background: $second-level-artwork-background;
-                            border: none;
-                        }
-                        @if $second-level-artwork-border-width and $second-level-artwork-border-color {
-                            background: transparent;
-                            border: $second-level-artwork-border-width solid $second-level-artwork-border-color;
-                        }
-                    }
-                    @if $second-level-artwork-border-radius {
-                        border-radius: $second-level-artwork-border-radius;
-                    }
-                }
-
-                //* Third level nested ul
             > ul {
+                padding-left: $measure * 2;
                 > li {
                     &:before {
-                        @if $third-level-artwork-image {
-                            background: url(#{$third-level-artwork-image});
+                        @if $second-level-artwork-image {
+                            background: url(#{$second-level-artwork-image});
                             background-repeat: no-repeat;
                             background-size: contain;
                             background-position: center;
                         } @else {
-                            @if $third-level-artwork-background {
-                                background: $third-level-artwork-background;
+                            @if $second-level-artwork-background {
+                                background: $second-level-artwork-background;
                                 border: none;
                             }
-                            @if $third-level-artwork-border-width and $third-level-artwork-border-color {
+                            @if $second-level-artwork-border-width and $second-level-artwork-border-color {
                                 background: transparent;
-                                border: $third-level-artwork-border-width solid $third-level-artwork-border-color;
+                                border: $second-level-artwork-border-width solid $second-level-artwork-border-color;
                             }
                         }
-                        @if $third-level-artwork-border-radius {
-                            border-radius: $third-level-artwork-border-radius;
+                        @if $second-level-artwork-border-radius {
+                            border-radius: $second-level-artwork-border-radius;
+                        }
+                    }
+
+                    //* Third level nested ul
+                > ul {
+                    > li {
+                        &:before {
+                            @if $third-level-artwork-image {
+                                background: url(#{$third-level-artwork-image});
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                background-position: center;
+                            } @else {
+                                @if $third-level-artwork-background {
+                                    background: $third-level-artwork-background;
+                                    border: none;
+                                }
+                                @if $third-level-artwork-border-width and $third-level-artwork-border-color {
+                                    background: transparent;
+                                    border: $third-level-artwork-border-width solid $third-level-artwork-border-color;
+                                }
+                            }
+                            @if $third-level-artwork-border-radius {
+                                border-radius: $third-level-artwork-border-radius;
+                            }
                         }
                     }
                 }
+                }
+                
             }
-            }
-            
-        }
         }
         
     }
@@ -283,6 +291,7 @@
             &:before {
                 color: $number-color;
             }
+            
         }
     }
 }
