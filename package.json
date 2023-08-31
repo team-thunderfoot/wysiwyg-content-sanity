@@ -1,6 +1,6 @@
 {
   "name": "@teamthunderfoot/wysiwyg-content-sanity",
-  "version": "0.0.06",
+  "version": "0.0.07",
   "source": [
     "src/*.html"
   ],
